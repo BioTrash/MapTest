@@ -15,10 +15,13 @@ public class SideUIClick : MonoBehaviour
     {
         Button btn = Energy.GetComponent<Button>();
         btn.onClick.AddListener(OnEnergyClick);
+
         Button btn1 = Population.GetComponent<Button>();
         btn1.onClick.AddListener(OnPopulationClick);
+
         Button btn2 = Farming.GetComponent<Button>();
         btn2.onClick.AddListener(OnFarmingClick);
+
         Button btn3 = Industry.GetComponent<Button>();
         btn3.onClick.AddListener(OnIndustryClick);
     }
