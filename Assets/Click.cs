@@ -50,6 +50,25 @@ public class Click : MonoBehaviour
 
             Load.Energy_Pot.text = content[0];
             Load.Energy_Pro.text = content[1];
+            Load.Arable_Land.text = content[2];
+            Load.Fertility.text = content[3];
+            Load.Used_Land.text = content[4];
+            Load.Provisions_Pro.text = content[5];
+            Load.Farm_E_Need.text = content[6];
+            Load.Farm_E_Use.text = content[7];
+            Load.Raw_Mat.text = content[8];
+            Load.Bld_Mat.text = content[9];
+            Load.Con_Goods.text = content[10];
+            Load.Ind_E_Need.text = content[11];
+            Load.Ind_E_Use.text = content[12];
+            Load.Tot_Pop.text = content[13];
+            Load.Attitude.text = content[14];
+            Load.Provisions_Need.text = content[15];
+            Load.Provisions_Con.text = content[16];
+            Load.Con_Goods_Need.text = content[17];
+            Load.Con_Goods_Con.text = content[18];
+            Load.Pop_E_Need.text = content[19];
+            Load.Pop_E_Use.text = content[20];
         }
         else
         {
@@ -80,6 +99,25 @@ public class Click : MonoBehaviour
 
             Load.Energy_Pot.text = content[0];
             Load.Energy_Pro.text = content[1];
+            Load.Arable_Land.text = content[2];
+            Load.Fertility.text = content[3];
+            Load.Used_Land.text = content[4];
+            Load.Provisions_Pro.text = content[5];
+            Load.Farm_E_Need.text = content[6];
+            Load.Farm_E_Use.text = content[7];
+            Load.Raw_Mat.text = content[8];
+            Load.Bld_Mat.text = content[9];
+            Load.Con_Goods.text = content[10];
+            Load.Ind_E_Need.text = content[11];
+            Load.Ind_E_Use.text = content[12];
+            Load.Tot_Pop.text = content[13];
+            Load.Attitude.text = content[14];
+            Load.Provisions_Need.text = content[15];
+            Load.Provisions_Con.text = content[16];
+            Load.Con_Goods_Need.text = content[17];
+            Load.Con_Goods_Con.text = content[18];
+            Load.Pop_E_Need.text = content[19];
+            Load.Pop_E_Use.text = content[20];
         }
         else
         {
@@ -110,6 +148,25 @@ public class Click : MonoBehaviour
 
             Load.Energy_Pot.text = content[0];
             Load.Energy_Pro.text = content[1];
+            Load.Arable_Land.text = content[2];
+            Load.Fertility.text = content[3];
+            Load.Used_Land.text = content[4];
+            Load.Provisions_Pro.text = content[5];
+            Load.Farm_E_Need.text = content[6];
+            Load.Farm_E_Use.text = content[7];
+            Load.Raw_Mat.text = content[8];
+            Load.Bld_Mat.text = content[9];
+            Load.Con_Goods.text = content[10];
+            Load.Ind_E_Need.text = content[11];
+            Load.Ind_E_Use.text = content[12];
+            Load.Tot_Pop.text = content[13];
+            Load.Attitude.text = content[14];
+            Load.Provisions_Need.text = content[15];
+            Load.Provisions_Con.text = content[16];
+            Load.Con_Goods_Need.text = content[17];
+            Load.Con_Goods_Con.text = content[18];
+            Load.Pop_E_Need.text = content[19];
+            Load.Pop_E_Use.text = content[20];
         }
         else
         {
@@ -140,6 +197,25 @@ public class Click : MonoBehaviour
 
             Load.Energy_Pot.text = content[0];
             Load.Energy_Pro.text = content[1];
+            Load.Arable_Land.text = content[2];
+            Load.Fertility.text = content[3];
+            Load.Used_Land.text = content[4];
+            Load.Provisions_Pro.text = content[5];
+            Load.Farm_E_Need.text = content[6];
+            Load.Farm_E_Use.text = content[7];
+            Load.Raw_Mat.text = content[8];
+            Load.Bld_Mat.text = content[9];
+            Load.Con_Goods.text = content[10];
+            Load.Ind_E_Need.text = content[11];
+            Load.Ind_E_Use.text = content[12];
+            Load.Tot_Pop.text = content[13];
+            Load.Attitude.text = content[14];
+            Load.Provisions_Need.text = content[15];
+            Load.Provisions_Con.text = content[16];
+            Load.Con_Goods_Need.text = content[17];
+            Load.Con_Goods_Con.text = content[18];
+            Load.Pop_E_Need.text = content[19];
+            Load.Pop_E_Use.text = content[20];
         }
         else
         {
