@@ -23,18 +23,18 @@ public class BuildingUIClick : MonoBehaviour
 
     private void OnBldClick()
     {
-        BuildingUI.transform.position = new Vector3(Convert.ToSingle(1000), -711);
+        BuildingUI.transform.position = new Vector3(Convert.ToSingle(640), -712);
     }
     private void OnBld1Click()
     {
-        BuildingUI.transform.position = new Vector3(Convert.ToSingle(1000), -711);
+        BuildingUI.transform.position = new Vector3(Convert.ToSingle(640), -712);
     }
     private void OnBld2Click()
     {
-        BuildingUI.transform.position = new Vector3(Convert.ToSingle(1000), -711);
+        BuildingUI.transform.position = new Vector3(Convert.ToSingle(640), -712);
     }
     private void OnBld3Click()
     {
-        BuildingUI.transform.position = new Vector3(Convert.ToSingle(1000), -711);
+        BuildingUI.transform.position = new Vector3(Convert.ToSingle(640), -712);
     }
 }
