@@ -30,6 +30,7 @@ public class HoverTipManager : MonoBehaviour
 
     private void ShowTip(string tip, Vector2 mousePos)
     {
+        tip = "Test, Te-e-st, T-e-e-e-st\n TEEEEEEEEEEEEEST";
         tipText.text = tip;
         tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 600 ? 600 : tipText.preferredWidth, tipText.preferredHeight);
 
