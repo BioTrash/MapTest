@@ -1,27 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 
 public class HoverTipManager : MonoBehaviour
 {
+    public const string saveSeparator = "//";
     public TextMeshProUGUI tipText;
     public RectTransform tipWindow;
 
     public static Action <string, Vector2> OnMouseHover;
-    public static Action OnMOuseLoseFocus;
+    public static Action OnMouseLoseFocus;
 
     private void OnEnable()
     {
         OnMouseHover += ShowTip;
-        OnMOuseLoseFocus += HideTip;
+        OnMouseLoseFocus += HideTip;
     }
 
     private void OnDisable()
     {
         OnMouseHover -= ShowTip;
-        OnMOuseLoseFocus -= HideTip;
+        OnMouseLoseFocus -= HideTip;
     }
     void Start()
     {
@@ -30,7 +32,7 @@ public class HoverTipManager : MonoBehaviour
 
     private void ShowTip(string tip, Vector2 mousePos)
     {
-        tip = "Test, Te-e-st, T-e-e-e-st\n TEEEEEEEEEEEEEST";
+        tip = "Wind Farm Complex:\n\n The followign complex converts 20% of the tile's potential energy into usable energy.";
         tipText.text = tip;
         tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 600 ? 600 : tipText.preferredWidth, tipText.preferredHeight);
 

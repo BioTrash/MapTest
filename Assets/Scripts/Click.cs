@@ -11,6 +11,7 @@ public class Click : MonoBehaviour
     public const string saveSeparator = "//";
 
     public Button Button0, Button1, Button2, Button3;
+    public Button Bld_Button, Bld_Button1;
     public GameObject MapSideUI, EnergyUI, PopulationUI, FarmingUI, IndustryUI;
     public GameObject BldUI_E, BldUI_P, BldUI_F, BldUI_I;
 
@@ -76,6 +77,26 @@ public class Click : MonoBehaviour
 
             File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt", Save.saveStringReal);
         }
+
+        Button btn = Bld_Button.GetComponent<Button>();
+        btn.onClick.AddListener(Build_Wind);
+
+        void Build_Wind()
+        {
+            string saveString = File.ReadAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt");
+            string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
+
+            ResourceScriptLoad Load = new ResourceScriptLoad();
+
+            int energy_Pro = Convert.ToInt32(Convert.ToInt32(content[0]) * 0.2);
+
+            content[1] = Convert.ToString(energy_Pro);
+
+            Load.Energy_Pro.text = content[1];
+
+            saveString = string.Join(saveSeparator, content);
+            File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt", saveString);
+        }
     }
 
     private void OnClick1()
@@ -124,6 +145,26 @@ public class Click : MonoBehaviour
             ResourceScript Save = new ResourceScript();
 
             File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save1.txt", Save.saveStringReal);
+        }
+
+        Button btn = Bld_Button.GetComponent<Button>();
+        btn.onClick.AddListener(Build_Wind);
+
+        void Build_Wind()
+        {
+            string saveString = File.ReadAllText(Application.dataPath + "/SaveTxt/ValueSave/save1.txt");
+            string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
+
+            ResourceScriptLoad Load = new ResourceScriptLoad();
+
+            int energy_Pro = Convert.ToInt32(Convert.ToInt32(content[0]) * 0.2);
+
+            content[1] = Convert.ToString(energy_Pro);
+
+            Load.Energy_Pro.text = content[1];
+
+            saveString = string.Join(saveSeparator, content);
+            File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save1.txt", saveString);
         }
     }
 

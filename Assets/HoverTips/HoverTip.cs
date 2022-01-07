@@ -13,6 +13,6 @@ public class HoverTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        HoverTipManager.OnMOuseLoseFocus();  
+        HoverTipManager.OnMouseLoseFocus();  
     }
 }
