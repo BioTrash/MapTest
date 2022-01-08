@@ -87,15 +87,23 @@ public class Click : MonoBehaviour
             string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
 
             ResourceScriptLoad Load = new ResourceScriptLoad();
+            HoverTipManager Info = new HoverTipManager();
 
             int energy_Pro = Convert.ToInt32(Convert.ToInt32(content[0]) * 0.2);
 
             content[1] = Convert.ToString(energy_Pro);
 
-            Load.Energy_Pro.text = content[1];
+            if (Convert.ToInt32(content[9]) > Info.Bld_Mat_Need)
+            {
+                Load.Energy_Pro.text = content[1];
 
-            saveString = string.Join(saveSeparator, content);
-            File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt", saveString);
+                saveString = string.Join(saveSeparator, content);
+                File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt", saveString);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 
@@ -152,19 +160,27 @@ public class Click : MonoBehaviour
 
         void Build_Wind()
         {
-            string saveString = File.ReadAllText(Application.dataPath + "/SaveTxt/ValueSave/save1.txt");
+            string saveString = File.ReadAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt");
             string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
 
             ResourceScriptLoad Load = new ResourceScriptLoad();
+            HoverTipManager Info = new HoverTipManager();
 
             int energy_Pro = Convert.ToInt32(Convert.ToInt32(content[0]) * 0.2);
 
             content[1] = Convert.ToString(energy_Pro);
 
-            Load.Energy_Pro.text = content[1];
+            if (Convert.ToInt32(content[9]) > Info.Bld_Mat_Need)
+            {
+                Load.Energy_Pro.text = content[1];
 
-            saveString = string.Join(saveSeparator, content);
-            File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save1.txt", saveString);
+                saveString = string.Join(saveSeparator, content);
+                File.WriteAllText(Application.dataPath + "/SaveTxt/ValueSave/save.txt", saveString);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 
