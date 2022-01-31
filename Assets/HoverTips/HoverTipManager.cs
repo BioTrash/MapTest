@@ -8,10 +8,14 @@ using UnityEngine;
 public class HoverTipManager : MonoBehaviour
 {
     public int Bld_Mat_Need;
+    public int real_bld_time;
+    public int bld_time;
 
-    public const string saveSeparator = "//";
     public TextMeshProUGUI tipText;
     public RectTransform tipWindow;
+
+    public GameObject Empty;
+    public TimeScript timeScript;
 
     public static Action <string, Vector2> OnMouseHover;
     public static Action OnMouseLoseFocus;
@@ -27,13 +31,34 @@ public class HoverTipManager : MonoBehaviour
         OnMouseHover -= ShowTip;
         OnMouseLoseFocus -= HideTip;
     }
-    void Start()
+    private void Start()
     {
         HideTip();
+
+    }
+    private void Update()
+    {
+        ResourceScriptLoad Load = new ResourceScriptLoad();
+
+        try
+        {
+            int energy_Pro = Convert.ToInt32(Convert.ToInt32(Load.Energy_Pot.text) * 0.2);
+
+            bld_time = energy_Pro / 500 / 12;
+        }
+        catch
+        {
+
+        }
+
+        timeScript = Empty.GetComponent<TimeScript>();
+
+        real_bld_time = timeScript.year + bld_time;
     }
 
     private void ShowTip(string tip, Vector2 mousePos)
     {
+
         ResourceScriptLoad Load = new ResourceScriptLoad();
 
         int energy_Pro = Convert.ToInt32(Convert.ToInt32(Load.Energy_Pot.text) * 0.2);
@@ -42,7 +67,7 @@ public class HoverTipManager : MonoBehaviour
 
         Bld_Mat_Need = bld_mat_need;
 
-        int bld_time = energy_Pro / 500 / 12;
+        bld_time = energy_Pro / 500 / 12;
 
         string not_Enough;
 
@@ -57,7 +82,8 @@ public class HoverTipManager : MonoBehaviour
 
         tip = "Wind Farm Complex:\n\nThe following complex converts 20% of the tile's potential energy into usable energy, in this case: <color=yellow>" + energy_Pro + "MW/h</color>\n\n" +
             "The Complex needs building material in order for construction to begin, in this case: <color=white>" + bld_mat_need + "Mt</color> of building material.\n\n" +
-            "The construction time is dependant on the amount of usable energy being converted, bigger energy output means longer construction time, in this case: <color=white>" + bld_time + " years</color>\n\n" + not_Enough;
+            "The construction time is dependant on the amount of usable energy being converted, bigger energy output means longer construction time, in this case the construction would be completed:" +
+            " <color=white>Year " + real_bld_time +" ( "+bld_time+" )" + "</color>\n\n" + not_Enough;
 
         tipText.text = tip;
         tipWindow.sizeDelta = new Vector2(tipText.preferredWidth > 600 ? 600 : tipText.preferredWidth, tipText.preferredHeight);

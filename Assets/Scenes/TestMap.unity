@@ -4364,7 +4364,9 @@ MonoBehaviour:
   First: {fileID: 1575384906}
   Second: {fileID: 374066833}
   Third: {fileID: 636216822}
-  timeCheck: 0
+  timeCheck_1st: 0
+  timeCheck_2nd: 0
+  timeCheck_3rd: 0
   year: 2420
   month: 1
   day: 0
@@ -5715,8 +5717,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bld_Mat_Need: 0
+  real_bld_time: 0
+  bld_time: 0
   tipText: {fileID: 1754079650}
   tipWindow: {fileID: 1340145658}
+  Empty: {fileID: 641022302}
+  timeScript: {fileID: 641022310}
 --- !u!114 &793527743
 MonoBehaviour:
   m_ObjectHideFlags: 0
